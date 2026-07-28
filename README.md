@@ -13,3 +13,18 @@ SH, SP, SC, OP, MB, HB, CS, CFO, BMFO
 1. 위 Kaggle 링크에서 데이터를 다운로드합니다.
 2. 압축을 풀어 저장소 루트에 `Data_YOLO/` 폴더로 배치합니다. (`images/train`, `images/val`, `labels/train`, `labels/val` 구조)
 3. `data.yaml`의 `path`가 `Data_YOLO`(상대 경로)로 되어 있는지 확인 후 학습을 진행합니다.
+
+## 환경 설정
+
+GPU: NVIDIA RTX 50계열(Blackwell) 기준 CUDA 12.8 빌드 torch 사용.
+
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
+GPU 인식 확인:
+```powershell
+.\.venv\Scripts\python.exe -c "import torch; print(torch.cuda.is_available(), torch.cuda.get_device_name(0))"
+```
