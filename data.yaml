@@ -1,0 +1,14 @@
+path: Data_YOLO
+train: images/train
+val: images/val
+nc: 9
+names:
+- SH
+- SP
+- SC
+- OP
+- MB
+- HB
+- CS
+- CFO
+- BMFO

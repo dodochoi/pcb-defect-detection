@@ -1,0 +1,11 @@
+Data_YOLO/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Training artifacts
+runs/
+*.pt
